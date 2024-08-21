@@ -1,0 +1,155 @@
+.App {
+  text-align: center;
+  background-color: #8758FF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.central-panel {
+  background-color: #1E123B;
+  width: 744px;
+  height: 496px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.date {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 309px;
+  height: 43px;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 2px solid #FCFCFC; /* Borda padrão */
+  background-color: #1E123B; /* Cor de fundo */
+  color: #FCFCFC; /* Cor do texto digitado */
+  box-sizing: border-box; /* Inclui a borda e o padding no tamanho total */
+}
+
+.search-bar:focus {
+  outline: none; /*Remove o contorno padrão (outline) aplicado pelo navegador e garante que a borda continue com a mesma largura e cor quando o input está em foco. */
+  border: 2px solid #FCFCFC; /* Mantém a mesma borda no estado de foco */
+}
+
+.search-bar::placeholder {
+  color: #FCFCFC; /* Cor do texto do placeholder */
+}
+
+
+.tasks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.task-item {
+  background-color: #ffffff;
+  width: 674px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer; /* Adiciona o cursor de ponteiro */
+}
+
+.task-item:hover {
+  background-color: #6C45CE; /* Cor de fundo ao passar o mouse */
+}
+
+.task-checkbox {
+  width: 27px;
+  height: 27px;
+  border: 0.77px solid #BDA4FF;
+  background-color: #ffffff; /* Cor de fundo padrão para o checkbox */
+  appearance: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  margin-right: 10px;
+}
+
+.task-checkbox:checked {
+  background-color: #1E123B;
+  border: 0.77px solid #BDA4FF;
+}
+
+.task-checkbox:checked::before {
+  content: "✓";
+  color: #FCFCFC;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+}
+
+
+.task-checkbox {
+  margin-right: 10px;
+}
+
+.task-name {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.task-button {
+  margin-left: 10px;
+  background-color: #8758FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.new-task-button {
+  width: 202px;
+  height: 50px;
+  background-color: #8758FF;
+  color: white;
+  border: 2px solid #FCFCFC;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1px;
+  margin-left: 570px;
+}
+.task-checkbox {
+  width: 27px;  /* Largura do checkbox */
+  height: 27px; /* Altura do checkbox */
+  border: 0.77px solid #BDA4FF; /* Cor da borda e largura */
+  background-color: #BDA4FF; /* Cor de fundo padrão */
+  appearance: none; /* Remove a aparência padrão do checkbox */
+  border-radius: 5px; /* Arredondamento das bordas */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse sobre o checkbox */
+  position: relative; /* Posicionamento relativo para criar o estilo personalizado */
+}
+
+.task-checkbox:checked {
+  background-color: #1E123B; /* Cor de fundo quando selecionado */
+  border: 0.77px solid #BDA4FF; /* Cor da borda quando selecionado */
+}
+
+.task-checkbox:checked::before {
+  content: "✓"; /* Marca o checkbox como selecionado */
+  color: #FCFCFC; /* Cor do texto dentro do checkbox */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px; /* Tamanho da fonte do ícone de verificação */
+}
