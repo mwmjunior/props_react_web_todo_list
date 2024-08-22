@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import './App.css';
 import { ReactComponent as DeleteIcon } from './assets/icons/delete.svg';
 import { ReactComponent as EditIcon } from './assets/icons/edit.svg';
 import { ReactComponent as SearchIcon } from './assets/icons/search.svg'; 
 
+import Modal from './pages/Modal/Modal'; 
 
 
 function App() {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleNewTaskClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   const dateOptions = { weekday: 'long', day: 'numeric', month: 'long' };
   const today = new Date().toLocaleDateString('pt-BR', dateOptions);
 
@@ -73,8 +86,18 @@ function App() {
         </div>
       </div>
 
-      <button className="new-task-button">Nova Tarefa</button>
+      {/* <button className="new-task-button">Nova Tarefa</button> */}
+
+      <button className="new-task-button" onClick={handleNewTaskClick}>
+        Nova Tarefa
+      </button>
+
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+        {/* Conteúdo do Modal */}
+        <p>Formulário para criar nova tarefa aqui.</p>
+      </Modal>
     </div>
+   
   );
 }
 

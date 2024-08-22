@@ -1,0 +1,41 @@
+
+  @font-face {
+    font-family: Open-sans;
+    src: url("../../assets/fonts/static/OpenSans-Medium.ttf");
+}
+
+.modal {
+    position: fixed;
+    top:  0%;
+    left: 0;
+    z-index: 10000;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+.modal-box {
+    width: 914px;
+    height: 472px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #1E123B;
+}
+
+.modal-title {
+    width: 100%;
+    font-family: Open-sans;
+    font-size: 32px;
+    color: white;
+    text-transform: bold;
+    text-align: center;
+    align-self: flex-start; 
+}
